@@ -24,9 +24,9 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Redes Sociais</h4>
             <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
+              <li><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+              <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
             </ul>
           </div>
         </div>
