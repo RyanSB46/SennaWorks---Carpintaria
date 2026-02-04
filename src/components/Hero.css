@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+  position: relative;
   color: white;
   text-align: center;
   padding: 6rem 1rem;
@@ -7,27 +7,63 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+  z-index: 0;
   transition: background 0.3s ease;
 }
 
-[data-theme="light"] .hero {
+[data-theme="light"] .hero-background {
   background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-  color: #2c3e50;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
 }
 
 .hero-content {
   max-width: 800px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
 }
 
 [data-theme="light"] .hero h1 {
-  text-shadow: none;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   color: #2c3e50;
 }
 
@@ -35,10 +71,13 @@
   font-size: 1.5rem;
   margin-bottom: 2rem;
   opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
 }
 
 [data-theme="light"] .hero p {
   color: #555;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .cta-button {
