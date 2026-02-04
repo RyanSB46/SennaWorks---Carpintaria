@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ export default function Contact() {
     phone: "",
     message: ""
   });
+
+  const { ref, isVisible } = useIntersectionObserver();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -22,10 +25,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact" ref={ref}>
       <div className="contact-container">
         <h2 className="section-title">Contacte-nos</h2>
-        <div className="contact-content">
+        <div className={`contact-content fade-in-left ${isVisible ? 'visible' : ''}`}>
           <div className="contact-info">
             <h3>Informações de Contacto</h3>
             <div className="info-item">
@@ -46,7 +49,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form fade-in-right" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"

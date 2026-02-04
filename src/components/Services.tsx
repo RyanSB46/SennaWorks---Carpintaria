@@ -1,5 +1,6 @@
 import React from "react";
 import "./Services.css";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function Services() {
   const services = [
@@ -20,13 +21,18 @@ export default function Services() {
     }
   ];
 
+  const { ref, isVisible } = useIntersectionObserver();
+
   return (
-    <section id="services" className="services">
+    <section id="services" className="services" ref={ref}>
       <div className="services-container">
         <h2 className="section-title">O que Fazemos</h2>
         <div className="services-list">
           {services.map((s, i) => (
-            <div key={i} className="service-card">
+            <div 
+              key={i} 
+              className={`service-card fade-in-up ${isVisible ? 'visible' : ''} delay-${i + 1}`}
+            >
               <div className="service-image">
                 <img src={s.image} alt={s.title} />
               </div>

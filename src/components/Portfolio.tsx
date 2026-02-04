@@ -1,5 +1,6 @@
 import React from "react";
 import "./Portfolio.css";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function Portfolio() {
   const projects = [
@@ -11,13 +12,18 @@ export default function Portfolio() {
     { title: "Recepção de Escritório", category: "Comercial" }
   ];
 
+  const { ref, isVisible } = useIntersectionObserver();
+
   return (
-    <section id="portfolio" className="portfolio">
+    <section id="portfolio" className="portfolio" ref={ref}>
       <div className="portfolio-container">
         <h2 className="section-title">Nossos Projetos</h2>
         <div className="portfolio-grid">
           {projects.map((p, i) => (
-            <div key={i} className="portfolio-card">
+            <div 
+              key={i} 
+              className={`portfolio-card fade-in-scale ${isVisible ? 'visible' : ''} delay-${i + 1}`}
+            >
               <div className="portfolio-image">
                 <span>🖼️</span>
                 <div className="portfolio-overlay">

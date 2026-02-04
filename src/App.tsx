@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './animations.css';
 import './theme.css';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
