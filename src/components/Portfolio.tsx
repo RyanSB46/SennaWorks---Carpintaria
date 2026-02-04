@@ -20,6 +20,10 @@ export default function Portfolio() {
             <div key={i} className="portfolio-card">
               <div className="portfolio-image">
                 <span>🖼️</span>
+                <div className="portfolio-overlay">
+                  <span className="overlay-icon">👁️</span>
+                  <span className="overlay-text">Ver mais</span>
+                </div>
               </div>
               <h4>{p.title}</h4>
               <p>{p.category}</p>
