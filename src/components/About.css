@@ -1,18 +1,16 @@
 .about {
-  background: white;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   padding: 4rem 1rem;
+  transition: background 0.3s ease;
+}
+
+[data-theme="light"] .about {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
 }
 
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.about h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 3rem;
 }
 
 .about-content {
@@ -23,8 +21,13 @@
 }
 
 .about-text {
-  color: #555;
+  color: #ecf0f1;
   line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .about-text {
+  color: #555;
 }
 
 .about-text p {
@@ -44,7 +47,12 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
-  color: #2c3e50;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .feature {
+  color: #555;
 }
 
 .feature span {
@@ -60,6 +68,11 @@
   align-items: center;
   justify-content: center;
   font-size: 4rem;
+  transition: background 0.3s ease;
+}
+
+[data-theme="light"] .about-image {
+  background: linear-gradient(135deg, #e0e0e0 0%, #cccccc 100%);
 }
 
 .placeholder {
@@ -79,3 +92,4 @@
     height: 250px;
   }
 }
+

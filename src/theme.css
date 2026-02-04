@@ -1,0 +1,54 @@
+/* Estilos globais para a seção de títulos (h2) */
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+[data-theme="light"] .section-title {
+  color: white;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Correções de cores de texto no tema light */
+
+[data-theme="light"] {
+  --text-primary: #333;
+  --text-secondary: #555;
+  --text-light: #666;
+}
+
+[data-theme="dark"] {
+  --text-primary: #ecf0f1;
+  --text-secondary: #bdc3c7;
+  --text-light: #95a5a6;
+}
+
+/* Aplicar as cores corretas em diferentes elementos */
+
+[data-theme="light"] .about-text,
+[data-theme="light"] .info-item p,
+[data-theme="light"] p {
+  color: #333 !important;
+}
+
+[data-theme="light"] .contact-info h3,
+[data-theme="light"] .about-text h3,
+[data-theme="light"] h3 {
+  color: #2c3e50 !important;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}

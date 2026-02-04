@@ -14,7 +14,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="portfolio">
       <div className="portfolio-container">
-        <h2>Nossos Projetos</h2>
+        <h2 className="section-title">Nossos Projetos</h2>
         <div className="portfolio-grid">
           {projects.map((p, i) => (
             <div key={i} className="portfolio-card">

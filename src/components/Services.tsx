@@ -6,30 +6,34 @@ export default function Services() {
     {
       title: "Carpintaria Residencial",
       desc: "Projetos sob medida para a sua casa",
-      icon: "🏠"
+      image: "/projetocozinha2.jpeg"
     },
     {
       title: "Mobiliário Personalizado",
       desc: "Design exclusivo e durável",
-      icon: "🪑"
+      image: "/projetoacabamento1.jpeg"
     },
     {
       title: "Remodelações Comerciais",
       desc: "Espaços adaptados ao seu negócio",
-      icon: "🏢"
+      image: "/projetoempresa2.jpeg"
     }
   ];
 
   return (
     <section id="services" className="services">
       <div className="services-container">
-        <h2>O que Fazemos</h2>
+        <h2 className="section-title">O que Fazemos</h2>
         <div className="services-list">
           {services.map((s, i) => (
             <div key={i} className="service-card">
-              <div className="service-icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
+              <div className="service-image">
+                <img src={s.image} alt={s.title} />
+              </div>
+              <div className="service-content">
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -1,12 +1,15 @@
 import React from "react";
 import "./Header.css";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function Header() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1>🪚 Senna Works</h1>
+          <img src="/sennaworks-logo.png" alt="Senna Works Logo" className="logo-img" />
         </div>
         <nav className="nav">
           <ul>
@@ -17,6 +20,14 @@ export default function Header() {
             <li><a href="#contact">Contactos</a></li>
           </ul>
         </nav>
+        <button 
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Alternar tema"
+          title={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
       </div>
     </header>
   );

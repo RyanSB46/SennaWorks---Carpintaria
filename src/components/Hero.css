@@ -7,6 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s ease;
+}
+
+[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  color: #2c3e50;
 }
 
 .hero-content {
@@ -20,10 +26,19 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+[data-theme="light"] .hero h1 {
+  text-shadow: none;
+  color: #2c3e50;
+}
+
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   opacity: 0.95;
+}
+
+[data-theme="light"] .hero p {
+  color: #555;
 }
 
 .cta-button {
@@ -58,3 +73,4 @@
     padding: 4rem 1rem;
   }
 }
+

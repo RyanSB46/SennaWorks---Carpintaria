@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
-        <h2>Contacte-nos</h2>
+        <h2 className="section-title">Contacte-nos</h2>
         <div className="contact-content">
           <div className="contact-info">
             <h3>Informações de Contacto</h3>
