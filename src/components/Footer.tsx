@@ -26,9 +26,8 @@ export default function Footer() {
               <div className="footer-column">
                 <h5>Redes</h5>
                 <ul className="social-links">
-                  <li><a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">f</a></li>
-                  <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">@</a></li>
-                  <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a></li>
+                  <li><a href="https://www.instagram.com/sennaworks?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" aria-label="Instagram">@</a></li>
+                  {/* <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a></li> */}
                 </ul>
               </div>
             </div>
@@ -38,9 +37,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>&copy; {currentYear} Senna Works. Todos os direitos reservados.</p>
           <ul className="footer-legal">
-            <li><a href="#">Privacidade</a></li>
-            <li><a href="#">Termos</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li><a href="https://example.com/privacidade">Privacidade</a></li>
+            <li><a href="https://example.com/termos">Termos</a></li>
+            <li><a href="https://example.com/cookies">Cookies</a></li>
           </ul>
         </div>
       </div>
