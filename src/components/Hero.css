@@ -90,13 +90,19 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 4px 8px rgba(243, 156, 18, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button:hover {
   background: #e67e22;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 6px 12px rgba(230, 126, 34, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.25),
+    0 18px 36px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
