@@ -5,7 +5,7 @@
   font-size: 2.5rem;
   color: white;
   margin-bottom: 4rem;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
   padding: 2rem;
   border-radius: 10px;
   display: inline-block;
@@ -22,7 +22,7 @@
 
 [data-theme="light"] .section-title {
   color: white;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
   box-shadow: 
     0 4px 6px rgba(44, 62, 80, 0.15),
     0 8px 16px rgba(0, 0, 0, 0.12),
