@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { useTheme } from "../contexts/ThemeContext";
+import logo from "../assets/images/logo/sennaworks-logo.png";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -9,7 +10,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src="/sennaworks-logo.png" alt="Senna Works Logo" className="logo-img" />
+          <img src={logo} alt="Senna Works Logo" className="logo-img" />
         </div>
         <nav className="nav">
           <ul>

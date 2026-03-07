@@ -1,23 +1,26 @@
 import React from "react";
 import "./Services.css";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import projetoCozinha from "../assets/images/projects/projetocozinha2.jpeg";
+import projetoAcabamento from "../assets/images/projects/projetoacabamento1.jpeg";
+import projetoEmpresa from "../assets/images/projects/projetoempresa2.jpeg";
 
 export default function Services() {
   const services = [
     {
       title: "Carpintaria Residencial",
       desc: "Projetos sob medida para a sua casa",
-      image: "/projetocozinha2.jpeg"
+      image: projetoCozinha
     },
     {
       title: "Mobiliário Personalizado",
       desc: "Design exclusivo e durável",
-      image: "/projetoacabamento1.jpeg"
+      image: projetoAcabamento
     },
     {
       title: "Remodelações Comerciais",
       desc: "Espaços adaptados ao seu negócio",
-      image: "/projetoempresa2.jpeg"
+      image: projetoEmpresa
     }
   ];
 
